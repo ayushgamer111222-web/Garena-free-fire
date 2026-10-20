@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   background: #f8fafc;
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -59,10 +59,20 @@ h1 {
 
 input {
   width: 100%;
+  min-width: 0;
   border: none;
   outline: none;
   font-size: 19px;
   background: transparent;
+  color: #111827;
+}
+
+input::placeholder {
+  color: #929bb0;
+}
+
+.field:focus-within {
+  border-color: #ff1025;
 }
 
 button {
@@ -72,5 +82,85 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 12px;
+  cursor: pointer;
+}
 
-  
+button:active {
+  background: #d90018;
+}
+
+.message {
+  color: #b91c1c;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.note {
+  color: #777;
+  font-size: 12px;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    Garena
+  </div>
+
+  <h1>Register</h1>
+
+  <div class="field">
+    <span class="icon">✉</span>
+    <input
+      type="email"
+      placeholder="Gmail"
+      autocomplete="off"
+      aria-label="Gmail"
+    >
+  </div>
+
+  <div class="field">
+    <span class="icon">🔒</span>
+    <input
+      type="password"
+      placeholder="Password"
+      autocomplete="off"
+      aria-label="Password"
+    >
+  </div>
+
+  <button
+    type="button"
+    onclick="showMessage()"
+  >
+    Login
+  </button>
+
+  <p
+    class="message"
+    id="message"
+    role="status"
+  ></p>
+
+  <p class="note">
+    Fan-made design. Not an official Garena login.
+  </p>
+
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("message").textContent =
+    "Login is not available yet.";
+}
+</script>
+
+</body>
+</html>
