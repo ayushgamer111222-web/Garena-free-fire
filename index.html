@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garena - Register</title>
+<title>Garena Fan Design</title>
 
 <style>
 * {
@@ -12,61 +13,69 @@
 
 body {
   margin: 0;
+  background: #f8fafc;
   font-family: Arial, sans-serif;
-  background: #eeeeee;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .container {
-  background: #ffffff;
-  padding: 30px 25px;
   width: 90%;
-  max-width: 380px;
-  border-radius: 12px;
+  max-width: 420px;
   text-align: center;
-  box-shadow: 0 4px 20px #00000018;
 }
 
 .logo {
-  color: #16a34a;
-  font-size: 38px;
+  color: #ff0015;
+  font-size: 58px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 45px;
 }
 
-h2 {
-  color: #222222;
-  margin-bottom: 25px;
+h1 {
+  color: #111827;
+  font-size: 38px;
+  margin-bottom: 35px;
 }
 
-input {
+.field {
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border: 1px solid #cccccc;
-  border-radius: 7px;
-  font-size: 16px;
+  height: 65px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 18px;
+  padding: 15px;
+  color: #929bb0;
+  font-size: 19px;
+  text-align: left;
+}
+
+.icon {
+  font-size: 25px;
+  margin-right: 20px;
 }
 
 button {
   width: 100%;
-  padding: 14px;
-  margin-top: 15px;
-  background: #2563eb;
+  height: 65px;
+  background: #ff1025;
   color: white;
   border: none;
-  border-radius: 7px;
-  font-size: 17px;
-  cursor: pointer;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
-.message {
-  margin-top: 15px;
-  color: #b91c1c;
-  font-size: 14px;
+.note {
+  color: #777;
+  font-size: 12px;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -75,24 +84,31 @@ button {
 
 <div class="container">
 
-  <div class="logo">Garena</div>
+  <div class="logo">
+    Garena
+  </div>
 
-  <h2>Register</h2>
+  <h1>Register</h1>
 
-  <input
-    type="email"
-    placeholder="Google Account"
-    autocomplete="off"
-  >
+  <div class="field">
+    <span class="icon">✉</span>
+    Gmail
+  </div>
 
-  <input
-    type="password"
-    placeholder="Password"
-    autocomplete="off"
-  >
+  <div class="field">
+    <span class="icon">🔒</span>
+    Password
+  </div>
 
-  <button onclick="showMessage()">
-    Register
+  <button type="button">
+    Login
   </button>
 
-  <p class="message
+  <p class="note">
+    Fan-made design preview. Not an official login.
+  </p>
+
+</div>
+
+</body>
+</html>
