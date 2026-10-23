@@ -152,4 +152,30 @@ button:active {
   </p>
 
 </div>
-<script src="h
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init({
+    publicKey: "MKcTqPydpPWdHb6zG"
+  });
+
+  document.getElementById("contact-form")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm(
+        "service_mwom3mq",
+        "template_9pr363d",
+        this
+      ).then(function() {
+        document.getElementById("message").textContent =
+          "Message sent successfully!";
+      }, function(error) {
+        document.getElementById("message").textContent =
+          "Message failed. Please try again.";
+        console.error(error);
+      });
+    });                                                                                                                                                                                
+</script>
+</body>
+</html>
